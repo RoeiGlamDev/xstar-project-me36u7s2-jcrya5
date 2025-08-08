@@ -1,0 +1,93 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const HeroSection: React.FC = () => {
+    return (
+        <section className="relative bg-white overflow-hidden">
+            <div className="absolute inset-0 bg-orange-500 opacity-50"></div>
+            <div className="container mx-auto flex flex-col items-center justify-center h-screen text-center relative z-10">
+                <motion.div 
+                    className="text-5xl md:text-7xl font-bold text-white"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Welcome to luxury LRP cosmetics
+                </motion.h1>
+                <motion.div 
+                    className="mt-4 text-lg md:text-2xl text-white"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    Elevate your beauty with our premium cosmetics line.
+                </motion.p>
+                <motion.div 
+                    className="mt-8 px-6 py-3 bg-white text-orange-500 font-semibold rounded-lg shadow-lg hover:bg-orange-100 transition duration-300"
+                    initial={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    Shop Now
+                </motion.button>
+            </div>
+        </section>
+    );
+};
+
+const FeaturesSection: React.FC = () => {
+    return (
+        <section className="py-20 bg-white">
+            <div className="container mx-auto text-center">
+                <motion.div 
+                    className="text-4xl font-bold text-orange-500"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Why Choose luxury LRP cosmetics?
+                </motion.h2>
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <motion.div 
+                        className="bg-orange-100 p-6 rounded-lg shadow-lg"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <h3 className="text-xl font-semibold text-orange-500">Premium Quality</h3>
+                        <p className="mt-2 text-gray-700">Our products are crafted with the finest ingredients for luxurious results.</p>
+                    </motion.div>
+                    <motion.div 
+                        className="bg-orange-100 p-6 rounded-lg shadow-lg"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        <h3 className="text-xl font-semibold text-orange-500">Elegant Packaging</h3>
+                        <p className="mt-2 text-gray-700">Experience beauty in every detail with our exquisite packaging.</p>
+                    </motion.div>
+                    <motion.div 
+                        className="bg-orange-100 p-6 rounded-lg shadow-lg"
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                        <h3 className="text-xl font-semibold text-orange-500">Cruelty-Free</h3>
+                        <p className="mt-2 text-gray-700">We are committed to ethical practices and never test on animals.</p>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const LuxuryLRPCosmetics: React.FC = () => {
+    return (
+        <div>
+            <HeroSection />
+            <FeaturesSection />
+        </div>
+    );
+};
+
+export default LuxuryLRPCosmetics;
